@@ -45,3 +45,38 @@ form button {
 form button:hover {
     background: #555;
 }
+/* Drag-and-Drop Area */
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background: #f9f9f9;
+    margin: 20px auto;
+    max-width: 500px;
+    cursor: pointer;
+}
+#drop-area.highlight {
+    border-color: #333;
+    background: #e6e6e6;
+}
+
+/* File List Styling */
+#fileList {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 500px;
+}
+#fileList li {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Manual File Upload Form */
+#manual-upload-form {
+    text-align: center;
+    margin: 20px auto;
+}
