@@ -2,6 +2,7 @@
 // Select elements
 const dropArea = document.getElementById('drop-area');
 const fileList = document.getElementById('fileList');
+const manualText = document.getElementById('manualText');
 
 // Highlight drop area when file is dragged over it
 ['dragenter', 'dragover'].forEach(eventName => {
@@ -26,14 +27,27 @@ dropArea.addEventListener('drop', e => {
     handleFiles(files);
 });
 
-// Handle manual file selection
+// Handle file input and display the file names
 function handleFiles(files) {
     for (let file of files) {
         const li = document.createElement('li');
-        li.textContent = file.name;
+        li.textContent = `File added: ${file.name}`;
         fileList.appendChild(li);
 
-        // Optional: Upload file to the server or show preview here
+        // Optional: Upload file to a server or show a preview
         console.log(`File added: ${file.name}`);
     }
+}
+
+// Handle manual text submission
+function submitManualText() {
+    const text = manualText.value.trim();
+    if (text === '') {
+        alert('Please enter some text before submitting.');
+        return;
+    }
+
+    console.log('Submitted text:', text);
+    alert('Your text has been submitted successfully!');
+    manualText.value = ''; // Clear the text area after submission
 }
