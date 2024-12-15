@@ -75,8 +75,28 @@ form button:hover {
     border-radius: 5px;
 }
 
-/* Manual File Upload Form */
-#manual-upload-form {
+/* Manual Typing Area */
+#manual-entry {
     text-align: center;
     margin: 20px auto;
+    max-width: 500px;
+}
+#manual-entry textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+#manual-entry button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#manual-entry button:hover {
+    background: #555;
 }
