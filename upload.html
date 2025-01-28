@@ -15,29 +15,6 @@
     <header>
         <h1>Upload Your Content</h1>
         <nav>
-            function uploadFile(file) {
-    const user = firebase.auth().currentUser;
-
-    if (user) {
-        const storageRef = firebase.storage().ref(uploads/${user.uid}/${file.name});
-        const uploadTask = storageRef.put(file);
-
-        uploadTask.on("state_changed",
-            (snapshot) => {
-                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                console.log("Upload progress: ", progress + "%");
-            },
-            (error) => {
-                console.error("Upload error: ", error.message);
-            },
-            () => {
-                console.log("File uploaded successfully!");
-            }
-        );
-    } else {
-        alert("Please log in to upload files.");
-    }
-}
             <a href="index.html">Home</a>
             <a href="search.html">Search</a>
             <a href="upload.html">Upload</a>
